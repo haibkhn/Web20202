@@ -1,0 +1,1 @@
+Nhận xét: nếu đổi giao thức từ POST thành GET thì toàn bộ thông tin của ta sau khi submit sẽ được truyền vào url

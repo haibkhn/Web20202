@@ -1,1 +1,1 @@
-Nhận xét: nếu đổi giao thức từ POST thành GET thì toàn bộ thông tin của ta sau khi submit sẽ được truyền vào url
+Nhan xet: Neu doi giao thuc tu POST thanh GET thi toan bo thong tin cua ta sau khi submit se duoc truyen vao url

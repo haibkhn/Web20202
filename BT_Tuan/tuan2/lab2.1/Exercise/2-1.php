@@ -9,7 +9,9 @@
 		$university = $_POST["University"];
 		$major = $_POST["major"];
 		$gender = $_POST["gender"];
+		$birthday = $_POST["birthday"];
 		print ("Hello, $name<br>");
+		print ("Your birthday is $birthday<br> ");
 		print ("You are studying at $class $university<br>");
 		print ("Your major is $major<br>");
 		print ("Your gender is $gender<br>");

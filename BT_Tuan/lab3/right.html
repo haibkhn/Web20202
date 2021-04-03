@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<form >
+		<input type="text" id="blog">
+		<button onclick="setCook()">submit</button>
+	</form>
+	<script>
+		function setCook(){
+			var blog = document.getElementById("blog").value;
+			var now = new Date();
+			var time = now.getTime();
+			var expiresTime = time + 60*60*24*1000;
+			now.setTime(expiresTime);
+			document.cookie = "blog = " + blog + ";expires = " + now.toGMTString() + ";path=/";
+		}
+	</script>
+</body>
+</html>

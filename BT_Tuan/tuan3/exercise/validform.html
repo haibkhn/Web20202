@@ -6,7 +6,7 @@
     <title>Document</title>
   </head>
   <body>
-    <form action="valid.php" method="POST">
+    <form>
       <p>
         <label for="user">Username</label>
         <input type="text" name="user" id="user" placeholder="Not null" />
@@ -28,7 +28,7 @@
         <span id="spanphone"></span>
       </p>
     </form>
-    <button onclick="valid()">submit</button>
+    <button onclick="valid()">Submit</button>
     <script>
       function valid() {
         var user = document.getElementById("user").value;
@@ -40,17 +40,17 @@
           )
         ) {
           email = " valid";
-        } else email = "invalid";
+        } else email = "invalid email";
         if (
           /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/.test(
             phone
           )
         ) {
           phone = "valid";
-        } else phone = "invalid";
+        } else phone = "invalid, please enter with form xxx-xxx-xxxx";
 
         if (!user) {
-          user = "invalid";
+          user = "invalid, username must not null";
         } else user = "valid";
 
         // if(/[a-zA-Z]/.test(user)){

@@ -1,53 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
-</head>
-<body>
-	<form action="valid.php" method="POST">
-		<p>
-			<label for="user">username</label>
-			<input type="text" name="user" id="user">
-			<span id="spanuser"></span>
-		</p>
-		<p>
-			<label for="email">email</label>
-			<input type="text" name="email" id="email">
-			<span id="spanemail"></span>
-		</p>
-		<p>
-			<label for="phone">phone</label>
-			<input type="text" name="phone" id="phone">
-			<span id="spanphone"></span>
-		</p>
-		
-	</form>
-	<button onclick="valid()">submit</button>
-	<script>
-		function valid(){
-			var user = document.getElementById("user").value;
-			var email = document.getElementById("email").value;
-			var phone = document.getElementById("phone").value;
-			if (/^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email)){
-				email = " valid";
-			}
-			else email = "invalid";
-			if (/^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/.test(phone)){
-				phone = "valid";
-			}
-			else phone ="invalid";
-			if(/[a-zA-Z]/.test(user)){
-				user = "valid";
-			}
-			else user = "invalid";
-			document.getElementById("spanuser").innerHTML = user;
-			document.getElementById("spanemail").innerHTML = email;
-			document.getElementById("spanphone").innerHTML = phone;
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="valid.php" method="POST">
+      <p>
+        <label for="user">Username</label>
+        <input type="text" name="user" id="user" placeholder="Not null" />
+        <span id="spanuser"></span>
+      </p>
+      <p>
+        <label for="email">Email</label>
+        <input type="text" name="email" id="email" placeholder="Must have @" />
+        <span id="spanemail"></span>
+      </p>
+      <p>
+        <label for="phone">Phone</label>
+        <input
+          type="text"
+          name="phone"
+          id="phone"
+          placeholder="Ex: 123-456-7890"
+        />
+        <span id="spanphone"></span>
+      </p>
+    </form>
+    <button onclick="valid()">submit</button>
+    <script>
+      function valid() {
+        var user = document.getElementById("user").value;
+        var email = document.getElementById("email").value;
+        var phone = document.getElementById("phone").value;
+        if (
+          /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(
+            email
+          )
+        ) {
+          email = " valid";
+        } else email = "invalid";
+        if (
+          /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/.test(
+            phone
+          )
+        ) {
+          phone = "valid";
+        } else phone = "invalid";
 
+        if (!user) {
+          user = "invalid";
+        } else user = "valid";
 
-		}
-	</script>
-</body>
+        // if(/[a-zA-Z]/.test(user)){
+        // 	user = "valid";
+        // }
+        // else user = "invalid";
+        document.getElementById("spanuser").innerHTML = user;
+        document.getElementById("spanemail").innerHTML = email;
+        document.getElementById("spanphone").innerHTML = phone;
+      }
+    </script>
+  </body>
 </html>

@@ -7,9 +7,9 @@ class SQLQuery {
     /** Connects to database **/
  
     function connect($address, $account, $pwd, $name) {
-        $this->_dbHandle = @mysql_connect($address, $account, $pwd);
+        $this->_dbHandle = @mysqli_connect($address, $account, $pwd);
         if ($this->_dbHandle != 0) {
-            if (mysql_select_db($name, $this->_dbHandle)) {
+            if (mysqli_select_db($name, $this->_dbHandle)) {
                 return 1;
             }
             else {
@@ -24,7 +24,7 @@ class SQLQuery {
     /** Disconnects from database **/
  
     function disconnect() {
-        if (@mysql_close($this->_dbHandle) != 0) {
+        if (@mysqli_close($this->_dbHandle) != 0) {
             return 1;
         }  else {
             return 0;

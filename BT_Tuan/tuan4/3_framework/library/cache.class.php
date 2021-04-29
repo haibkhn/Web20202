@@ -1,7 +1,6 @@
 <?php
 class Cache {
-
-	function get($fileName) {
+    function get($fileName) {
 		$fileName = ROOT.DS.'tmp'.DS.'cache'.DS.$fileName;
 		if (file_exists($fileName)) {
 			$handle = fopen($fileName, 'rb');

@@ -22,8 +22,10 @@ function stripSlashesDeep($value) {
 }
 
 function removeMagicQuotes() {
-if ( get_magic_quotes_gpc() ) {
-	$_GET    = stripSlashesDeep($_GET   );
+
+//if ( get_magic_quotes_gpc() ) {
+    if(true) {
+        $_GET    = stripSlashesDeep($_GET   );
 	$_POST   = stripSlashesDeep($_POST  );
 	$_COOKIE = stripSlashesDeep($_COOKIE);
 }
@@ -52,6 +54,11 @@ function performAction($controller,$action,$queryString = null,$render = 0) {
 	$dispatch = new $controllerName($controller,$action);
 	$dispatch->render = $render;
 	return call_user_func_array(array($dispatch,$action),$queryString);
+}
+
+function redirectAction($controller,$action,$queryString = null,$render = 0) {
+	
+	
 }
 
 /** Routing **/
@@ -110,7 +117,8 @@ function callHook() {
 
 /** Autoload any classes that are required **/
 
-function __autoload($className) {
+//function __autoload($className) {
+function autoload_className($className) {
 	if (file_exists(ROOT . DS . 'library' . DS . strtolower($className) . '.class.php')) {
 		require_once(ROOT . DS . 'library' . DS . strtolower($className) . '.class.php');
 	} else if (file_exists(ROOT . DS . 'application' . DS . 'controllers' . DS . strtolower($className) . '.php')) {
@@ -144,9 +152,13 @@ function gzipOutput() {
 
 gzipOutput() || ob_start("ob_gzhandler");
 
-
+require_once 'cache.class.php';
+require_once 'inflection.class.php';
 $cache = new Cache();
 $inflect = new Inflection();
+
+spl_autoload_register('autoload_className');
+
 
 setReporting();
 removeMagicQuotes();

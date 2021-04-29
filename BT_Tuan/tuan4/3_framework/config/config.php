@@ -10,7 +10,7 @@ define('DB_USER', 'root');
 define('DB_PASSWORD', '');
 define('DB_HOST', 'localhost');
 
-// define('BASE_PATH','http://localhost/framework');
+define('BASE_PATH','http://localhost/Web20202/BT_Tuan/tuan4/3_framework/');
 
 
 define('PAGINATE_LIMIT', '5');

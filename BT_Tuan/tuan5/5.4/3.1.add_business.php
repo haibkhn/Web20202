@@ -41,9 +41,10 @@
 
                         /* fetch associative array */
                         while ($row = $result->fetch_assoc()) {
+                            $catname = $row["Title"];
                             $catid = $row["CategoryID"];
                             echo
-                                '<option value="'. $catid .'" name="'.$catid.'" id="'.$catid.'">'.$catid.'</option>';
+                                '<option value="'. $catid .'" name="'.$catid.'" id="'.$catid.'">'.$catname.'</option>';
                         }
 
                         $result->free();

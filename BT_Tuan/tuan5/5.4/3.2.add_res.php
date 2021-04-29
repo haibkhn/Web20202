@@ -35,7 +35,7 @@
                     $catid;
                     $cat_selected = $_POST['cat'];
 
-                    $mysqli = new mysqli("localhost", $user, $pass, $mydb);
+                    $mysqli = new mysqli($server, $user, $pass, $mydb);
 
                     $query = "SELECT * FROM $cat_tab";
                     if ($result = $mysqli->query($query)) {
@@ -43,12 +43,14 @@
                         /* fetch associative array */
                         while ($row = $result->fetch_assoc()) {
                             $catid = $row["CategoryID"];
+                            $catname = $row["Title"];
+
                             if($catid == $cat_selected) {
                                 echo
-                                    '<option value="'. $catid .'" name="'.$catid.'" id="'.$catid.'" selected>'.$catid.'</option>';
+                                    '<option value="'. $catid .'" name="'.$catid.'" id="'.$catid.'" selected>'.$catname.'</option>';
                             } else {
                                 echo
-                                    '<option value="'. $catid .'" name="'.$catid.'" id="'.$catid.'">'.$catid.'</option>';
+                                    '<option value="'. $catid .'" name="'.$catid.'" id="'.$catid.'">'.$catname.'</option>';
                             }
                         }
 

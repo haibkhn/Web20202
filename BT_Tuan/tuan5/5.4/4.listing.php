@@ -39,7 +39,7 @@
                 $catid;
                 $cnt = 0;
 
-                $mysqli = new mysqli("localhost", $user, $pass, $mydb);
+                $mysqli = new mysqli($server, $user, $pass, $mydb);
 
                 $query = "SELECT * FROM $cat_tab";
                 if ($result = $mysqli->query($query)) {
@@ -82,7 +82,7 @@
                 $mydb = 'business_service';
                 $biz_tab = 'Businesses';
                 $cat_tab = 'Categories';
-                $biz_cat = 'Biz-categories';
+                $biz_cat = 'Biz_categories';
                 // $t = 0;
 
                 //lấy url
@@ -100,20 +100,20 @@
                         if($cat_selected == '') {
 
                         } else {
-                            $mysqli = new mysqli("localhost", $user, $pass, $mydb);
+                            $mysqli = new mysqli($server, $user, $pass, $mydb);
                             $query1 = "use $mydb";
                             mysqli_query($mysqli, $query1);
                             $query2 = "SELECT $biz_tab.*, $biz_cat.*
-                            FROM $biz_tab JOIN $biz_cat
+                            FROM $biz_tab INNER JOIN $biz_cat
                             ON $biz_tab.BusinessID = $biz_cat.BusinessID
-                            WHERE $biz_cat.CategoryID LIKE '$cat_selected'";
+                            WHERE $biz_cat.CategoryID = '$cat_selected'";
                             if ($result = $mysqli->query($query2)) {
 
                                 /* fetch associative array */
                                 while ($row = $result->fetch_assoc()) {
                                     // $t++;
                                     $cnt = $row["BusinessID"];
-                                    $name = $row["BName"];
+                                    $name = $row["Name"];
                                     $address = $row["Address"];
                                     $city = $row["City"];
                                     $number = $row["Telephone"];

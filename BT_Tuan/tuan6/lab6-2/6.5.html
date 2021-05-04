@@ -1,85 +1,76 @@
 <html>
-<head>
-<title>THREE-COLUMN LIQUID LAYOUT WITH FLOATING BOXES</title>
-<style type="text/css">
-<!--
-body {
-  margin: 0px;
-  padding: 0px;
-}
-#header {
-  background: red;
-  width: 100%;
-}
-.left{
-  float: left;
-  width: 30%;
-  padding: 0px;
-}
-h1{
-  margin: 5px 0px;
-}
-#content{
-  margin-top: 5px;
-}
-.right{
-  float: right;
-  width: 15%;
-  background-color: yellow;
-  height: 150px;
-}
-.center{
-  float: left;
-  /*border: solid;*/
-  width: 100%;
-  text-align: center;
-}
-#above{
-  margin:0px;
-}
-#bellow{
-  margin:0px;
-}
-#footer {
-  color: white;
-  background: blue;
-  clear: both;
-  width: 100%;
-}
-.mid{
- float: left;
-}
--->
-</style>
-</head>
-<body>
-  	<div id="header">Header Section</div>
-  	<div>
-	    <div class="left">
-	      <h1>
-	        Main content
-	      </h1>
-	      <p id="content">
-	        Main contentMain contentMain contentMain contentMain content
-	      </p>
-	  	</div>
-  
-	  	<div class="right">
-	      <p id="above">
-	        Sidebar content
-	      </p>
-	      <p id="bellow">
-	        Sidebar contentSidebar contentSidebar contentSidebar contentSidebar contentSidebar content
-	      </p>
-	  	</div>
-	  	<div class="center">
-	  	...
-	    
-	  	</div>
-	  	<div class="right">
-	  		
-	  	</div>
-  	</div>
-  
-  	<div id="footer">Footer Section</div>
-</body>
+  <head>
+    <title>THREE-COLUMN LIQUID LAYOUT WITH FLOATING BOXES</title>
+    <style type="text/css">
+      body {
+        margin: 0px;
+        padding: 0px;
+      }
+      #header {
+        background: red;
+        width: 100%;
+      }
+      .left {
+        float: left;
+        width: 30%;
+        padding: 0px;
+      }
+      h1 {
+        margin: 5px 0px;
+      }
+      #content {
+        margin-top: 5px;
+      }
+      .right {
+        float: right;
+        width: 15%;
+        background-color: yellow;
+        height: 150px;
+      }
+      .center {
+        float: left;
+        /*border: solid;*/
+        width: 100%;
+        text-align: center;
+      }
+      #above {
+        margin: 0px;
+      }
+      #bellow {
+        margin: 0px;
+      }
+      #footer {
+        color: white;
+        background: blue;
+        clear: both;
+        width: 100%;
+      }
+      .mid {
+        float: left;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="header">Header Section</div>
+    <div>
+      <div class="left">
+        <h1>Main content</h1>
+        <p id="content">
+          Main contentMain contentMain contentMain contentMain content
+        </p>
+      </div>
+
+      <div class="right">
+        <p id="above">Sidebar content</p>
+        <p id="bellow">
+          Sidebar contentSidebar contentSidebar contentSidebar contentSidebar
+          contentSidebar content
+        </p>
+      </div>
+      <div class="center">...</div>
+      <div class="right"></div>
+    </div>
+
+    <div id="footer">Footer Section</div>
+  </body>
+</html>

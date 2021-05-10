@@ -1,0 +1,3 @@
+<Ifmodule mod_rewrite.c>
+	Options -Multiviews -Indexes
+</Ifmodule>	

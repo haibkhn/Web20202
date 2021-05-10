@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Bài tập 2-1</title>
+</head>
+<body>
+	<form action="2-1.php" method="POST" target="_blank">
+		<h3>Personal Info</h3>
+		<p>Name: &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; <input type="text" name="name" placeholder="Enter Your Name"> </p> 
+		
+		<p>Gender: &nbsp; &nbsp;&nbsp;
+			<input type="radio" id="male" name="gender" value="male">
+			<label for="male">Male</label>
+			<input type="radio" id="female" name="gender" value="female">
+			<label for="female">Female</label>
+			<input type="radio" id="super_saiyan" name="gender" value="super saiyan" checked>
+			<label for="other">Super Saiyan</label>
+		</p>
+		<p>Birthday:&nbsp;&nbsp; &nbsp;<input type="date" name="birthday"></p>
+		<p>Address: &nbsp;&nbsp;&nbsp;
+		<textarea placeholder="Enter Your Address" id="address" name="address" rows="4" cols="50" > </textarea>
+	    </p>
+		<label for="email">Email: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+		<input type="email" id="email" name="email" placeholder="Enter Your Mail">
+		<p>Year: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<select name="year">
+				<option>K62</option>
+				<option>K63</option>
+				<option>K64</option>
+			</select></p> 
+		
+		
+		<p>Class:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; <input type="text" name="Class" placeholder="Enter Your Class"></p> 
+		<p>University: &nbsp;<input type="text" name="University" placeholder="Enter Your University"></p> 
+		
+		<p>Major:&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; <input type="text" name="major" placeholder="Enter Your Major"></p> 
+		<h3>Hobbies</h3>
+		<div>
+		<input type="checkbox" id="hobbie1" name="hobbie[]" value="Swimming">
+		<label for="hobbie1">Swimming</label><br>
+		<input type="checkbox" id="hobbie2" name="hobbie[]" value="Running">
+		<label for="hobbie2">Running</label><br>
+		<input type="checkbox" id="hobbie3" name="hobbie[]" value="Football">
+		<label for="hobbie3">Football</label><br>
+		<input type="checkbox" id="hobbie4" name="hobbie[]" value="Basketball">
+		<label for="hobbie4">Basketball</label><br>
+		</div>
+		<br>
+
+		<input type="submit" value="Submit">
+		<input type="reset" value="Reset">
+
+	</form>
+</body>
+</html>

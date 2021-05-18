@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<pet xmlns="http://www.w3.org/1999/xhtml"> 
+	<name>Polly Parro</name><br/><br/> 
+	<age>3</age><br/><br/>
+	<species>parrot</species><br/><br/> 
+	<parents> 
+		<mother>Pia Parrot</mother><br/><br/> 
+		<father>Peter Parrot</father> 
+	</parents> 
+</pet>

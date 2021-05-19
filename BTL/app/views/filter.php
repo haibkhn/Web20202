@@ -32,7 +32,7 @@
 					<option value="">tat ca</option>
 					<option value="chung cu mini">chung cu mini</option>
 					<option value="phong tro">phong tro</option>
-					<option value="nga nguyen can">nha nguyen can</option>
+					<option value="nha nguyen can">nha nguyen can</option>
 				</select>
 			</div>
 			<button type="submit" name="filter" value="filter" style="margin: auto;">loc</button>

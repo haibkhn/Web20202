@@ -16,7 +16,7 @@
 			}       
 			// public function filter
 			public function filterHouseModel($data){
-				$sql = 'SELECT * FROM rent_house.houses where addr LIKE :site and cost >= :costfrom and cost <= :costto and s >= :sfrom and s <=:sto and type LIKE :type';
+				$sql = 'SELECT * FROM rent_house.houses where site LIKE :site and cost >= :costfrom and cost <= :costto and s >= :sfrom and s <=:sto and type LIKE :type';
 				// print_r($data);
 				// echo "<br/>";
 				$stmt = $this->connect->prepare($sql);
@@ -35,4 +35,32 @@
 				// var_dump($row);
 				return $row;
 			}
-		}
+
+			public function insertHouse($data){
+				$sql = 'INSERT INTO rent_house.houses (site, addr, cost, s, type, scribble, iduser, img) values (:site, :addr, :cost, :s, :type, :scribble, :iduser, :img)';
+				$stmt = $this->connect->prepare($sql);
+				$stmt->bindValue(':site',$data['site']);
+				$stmt->bindValue(':addr',$data['addr']);
+				$stmt->bindValue(':cost',$data['cost']);
+				$stmt->bindValue(':s',$data['s']);
+				$stmt->bindValue(':type',$data['type']);
+				$stmt->bindValue(':scribble',$data['scribble']);
+				$id = $this->getIduser($_SESSION['username']);
+				$stmt->bindValue(':iduser',$id);
+				$stmt->bindValue(':img',$data['img']);
+				// $stmt->execute();
+				if($stmt->execute() ) return true;
+				return false;
+			}
+
+			public function getIduser($username){
+				$sql = 'SELECT id FROM rent_house.users where name = :username';
+				$stmt = $this->connect->prepare($sql);
+				$stmt->bindValue(':username',$username);
+				
+				$stmt->execute();
+				$id = $stmt->fetch();
+				return $id['id'];
+			}
+
+		}	

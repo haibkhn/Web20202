@@ -36,8 +36,18 @@
 			foreach ($_POST as $key => $value) {
 				if($value != "") $dataPost[$key] = trim($value);
 			}
+			// var_dump($dataPost);
 			$data = $housesCtrl->filterHouseCtrl($dataPost);
+			// var_dump($data);
 			$this->view('index',$data); 
 		}
 
+		public function addPage(){
+			if(isset($_SESSION['username'])) $this->view('add_page');
+			else{
+				setcookie("none_user","dang nhap de su dung chuc nang nay", time() + 1);
+				$this->getAll();
+			}
+		}
+		
 	}

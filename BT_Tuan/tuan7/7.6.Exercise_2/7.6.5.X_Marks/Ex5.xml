@@ -1,0 +1,31 @@
+<?xml version="1.0"?> 
+<ingredients > 
+	<item> 
+		<desc>Boneless chicken breasts</desc><br/><br/> 
+		<quantity>2</quantity><br/><br/> 
+	</item> 
+	<item> 
+		<desc>Chopped onions</desc><br/><br/> 
+		<quantity>2</quantity><br/><br/> 
+	</item> 
+	<item> 
+		<desc>Ginger</desc><br/><br/> 
+		<quantity>1</quantity><br/><br/> 
+	</item> 
+	<item> 
+		<desc>Garlic</desc><br/><br/> 
+		<quantity>1</quantity><br/><br/> 
+	</item> 
+	<item> 
+		<desc>Red chili powder</desc><br/><br/> 
+		<quantity>1</quantity><br/><br/> 
+	</item> 
+	<item> 
+		<desc>Coriander seeds</desc><br/><br/> 
+		<quantity>1</quantity><br/><br/> 
+	</item> 
+	<item> 
+		<desc>Lime juice</desc><br/><br/> 
+		<quantity>2</quantity><br/><br/> 
+	</item> 
+</ingredients>

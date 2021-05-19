@@ -42,6 +42,18 @@
 			display: inline-block;
 		}*/
 	</style>
+	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+	<script type="text/javascript">
+		var getCookieValue = (name) => (
+  			document.cookie.match('(^|;)\\s*' + name + '\\s*=\\s*([^;]+)')?.pop() || ''
+		)
+		// $(document).ready(function(){
+		// 	if(getCookieValue('none_user') != '') 	alert(getCookieValue('none_user')); 
+		// });
+		document.addEventListener("DOMContentLoaded", function(event) { 
+  			if(getCookieValue('none_user') != '') 	alert(getCookieValue('none_user')); 
+		});
+	</script>
 </head>
 <body>
 	<?php include "header.php" ?>

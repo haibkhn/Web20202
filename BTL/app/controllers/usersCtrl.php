@@ -15,6 +15,7 @@ class usersCtrl extends controller
         $data = [
             'username' => '',
             'email' => '',
+            'phone' => '',
             'password' => '',
             'confirmPassword' => '',
             'usernameError' => '',
@@ -29,6 +30,7 @@ class usersCtrl extends controller
             $data = [
                 'username' => trim($_POST['username']),
                 'email' => trim($_POST['email']),
+                'phone' => trim($_POST['phone']),
                 'password' => trim($_POST['password']),
                 'confirmPassword' => trim($_POST['confirmPassword']),
                 'usernameError' => '',
@@ -44,6 +46,11 @@ class usersCtrl extends controller
                 $data['usernameError'] = 'Please enter username.';
             } elseif (!preg_match($nameValidation, $data['username'])) {
                 $data['usernameError'] = 'Name can only contain letters and numbers.';
+            }else {
+                //Check if name exists.
+                if ($this->userModel->findUserByName($data['username'])) {
+                $data['usernameError'] = 'Name is already taken.';
+                }
             }
 
             //Validate email

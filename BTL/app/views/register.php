@@ -33,6 +33,10 @@
 					<span><?php echo $data['emailError'] ?></span>
 				</p>
 				<p>
+					<div>phone</div>
+					<input type="tel" name="phone" pattern="[0-9]{10}" required="required" placeholder="0123456789">
+				</p>
+				<p>
 					<div>password</div>
 					<input type="password" name="password">
 					<span><?php echo $data['passwordError'] ?></span>
@@ -42,6 +46,7 @@
 					<input type="password" name="confirmPassword">
 					<span><?php echo $data['confirmPasswordError'] ?></span>
 				</p>
+				
 				<button id="submit" type="submit" value="submit">Submit</button>
 			</form>
 		</div>

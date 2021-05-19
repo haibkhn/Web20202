@@ -1,59 +1,77 @@
 <meta charset="UTF-8">
-<link rel="stylesheet" type="text/css" href="1.css">	
-
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="add_page.css">
 <body>
-	<h1>Đăng tin nhà đất</h1>
-	<div style="display: inline-block;background: green">
-		<?php if(isset($suc)) echo "<p>".$suc."</p>";?>
-	</div>
-	<div>
-		<form action="" method="POST" class="form" enctype="multipart/form-data">
-			<div class="">
-				<h2>Quận</h2>
-				<select name="site" id="site">
-					<option value="hai ba trung">Hai Bà Trưng</option>
-					<option value="hoan kiem">Hoàn Kiếm</option>
-					<option value="dong da">Đống Đa</option>
-					<option value="hoang mai">Hoàng Mai</option>
-					<option value="thanh xuan">Thanh Xuân</option>
-				</select>
-			</div>
-			<div>
-				<h2>Địa chỉ cụ thể</h2>
-				<input type="text" name="addr" required="required">
-			</div>
-			<div class="">
-				<h2>Giá cả</h2>
-				<input type="tel" name="cost" pattern="[0-9]{6,9}" required="required">
-			</div>
-			<div class="">
-				<h2>Diện tích</h2>
-				<input type="tel" name="s" pattern="[0-9]{1,4}" required="required">
-
-			</div>
-			<div class="">
-				<h2>Miêu tả nhà</h2>
-				<textarea name="scribble" cols="75%" rows="20%"></textarea>
-			</div>
-			<div class="margin1">
-				<h2><label for="type">Loại nhà</label></h2>
-				<select name="type" id="type">
-					<option value="chung cu mini">Chung cư mini</option>
-					<option value="phong tro">Phòng trọ</option>
-					<option value="nha nguyen can">Nhà nguyên căn</option>
-				</select>
-			</div>
-			<div class="">
-				<h2>Ảnh chính</h2>
-				<input type="file" name="main_img" required="required">
-			</div>
-			<div class="">
-				<h2>Ảnh thêm</h2>
-				<input type="file" name="extra_img[]" multiple>
-			</div>
-			<br>
-			<!-- <button type="submit" name="submit">submit</button> -->
-			<input type="submit" value="Đăng bài" name="submit">
-		</form>
-	</div>	
+<div class="wrapper">
+  <form method="post" enctype="multipart/form-data" action="">
+    <div class="title">
+      Đăng tin nhà đất
+    </div>
+    <div style="display: inline-block;background: green">
+      <?php if(isset($suc)) echo "<p>".$suc."</p>";?>
+    </div>
+    <div class="form">
+      <div class="inputfield">
+        <label>Quận</label>
+        <div class="custom_select">
+          <select name="site" id="site">
+            <option value="">Hoàn Kiếm</option>
+            <option value="male">Đống Đa</option>
+            <option value="female">Hoàng Mai</option>
+            <option value="female">Thanh Xuân</option>
+            <option value="female">Hai Bà Trưng</option>
+          </select>
+        </div>
+      </div>
+      <div class="inputfield">
+        <label>Địa chỉ cụ thể</label>
+        <input type="text" name="addr" required="required" class="input">
+      </div>  
+      <div class="inputfield">
+        <label>Giá cả</label>
+        <input type="tel" class="input" name="cost" pattern="[0-9]{6,9}" required="required">
+      </div>  
+      <div class="inputfield">
+        <label>Diện tích</label>
+        <input type="tel" name="s" pattern="[0-9]{1,4}" required="required" class="input">
+      </div>  
+      <div class="inputfield">
+        <label>Loại nhà</label>
+        <div class="custom_select">
+          <select name="type" id="type">
+            <option value="">Chung cư mini</option>
+            <option value="male">Phòng trọ</option>
+            <option value="female">Nhà nguyên căn</option>
+          </select>
+        </div>
+      </div>  
+      <div class="inputfield">
+          <label>Số điện thoại liên hệ</label>
+          <input type="text" class="input">
+      </div> 
+      <div class="inputfield">
+          <label>Miêu tả nhà</label>
+          <textarea class="textarea" name="scribble"></textarea>
+      </div> 
+      <div class="inputfield">
+          <label>Ảnh mô tả chính</label>
+          <input type="file" name="main_img" required="required">
+      </div>
+      <div class="inputfield">
+          <label>Ảnh mô tả thêm</label>
+          <input type="file" name="extra_img[]" multiple>
+      </div>
+      <div class="inputfield terms">
+          <label class="check">
+            <input type="checkbox">
+            <span class="checkmark"></span>
+          </label>
+          <p>Xác nhận đăng bài</p>
+      </div> 
+      <div class="inputfield">
+        <input type="submit" value="Đăng bài" class="btn" name="submit">
+      </div>
+    </div>
+  </form>
+</div>		
 </body>

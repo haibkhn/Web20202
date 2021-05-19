@@ -1,10 +1,22 @@
 <div id="filterform">
-		<form action="http://localhost:8088/public?url=homepage/filter" method="post">
-			<h2 class="margin1 align1">tim kiem</h2>
+		<form action="http://hailocalhost/Web/CNWeb20201/Web20202/BTL/public?url=homepage/filter" method="post">
+			<h2 class="margin1 align1">Tìm kiếm</h2>
+			<div class="outside_border">
+				<div class="search_bar">
+
+				</div>
+			</div>
+
+
+
+
+
+
+
 			<div class="margin1">
-				<p>khu vuc<p/>
+				<p>Khu vực<p/>
 				<select name="site" id="site">
-					<option value="">tat ca khu vuc</option>
+					<option value="">Tất cả khu vực</option>
 					<option value="hai ba trung">hai ba trung</option>
 					<option value="hoan kiem">hoan kiem</option>
 					<option value="dong da">dong da</option>

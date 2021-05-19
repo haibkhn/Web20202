@@ -1,11 +1,15 @@
-<div id="divheader">
-	<ul id="ulheader">
-		<li><a href="http://localhost:8088/public">Tim tro</a></li>
-		<li><a href="http://localhost:8088/public?url=homepage/addPage">Dang tin</a></li>
-		<li>
+<!-- <div id="divheader"> -->
+<nav>
+	<div class="logo">
+		<h4><a href="http://hailocalhost/Web/CNWeb20201/Web20202/BTL/public">Trang chủ</a></h4>
+	</div>
+	<ul class="nav-links">
+		<!-- <li><a href="http://hailocalhost/Web/CNWeb20201/Web20202/BTL/public">Trang chủ</a></li> -->
+		<li class="dang_tin"><a href="http://hailocalhost/Web/CNWeb20201/Web20202/BTL/public?url=homepage/addPage">Đăng tin</a></li>
+		<li class="dang_nhap">
 			<?php 
 				if(!isset($_SESSION['username'])){
-					echo '<a href="http://localhost:8088/public?url=users/login">'."Dang nhap".'</a>';
+					echo '<a href="http://hailocalhost/Web/CNWeb20201/Web20202/BTL/public?url=users/login">'."Đăng nhập".'</a>';
 				}
 				else{
 					echo '<span>'.$_SESSION['username'].'</span>';
@@ -13,17 +17,25 @@
 			?>
 			
 		</li>
-		<li>
+		<li class="dang_ky">
 			<?php 
 				if(!isset($_SESSION['username'])){
-					echo '<a href="http://localhost:8088/public?url=users/register">'."Dang ky".'</a>';
+					echo '<a href="http://hailocalhost/Web/CNWeb20201/Web20202/BTL/public?url=users/register">'."Đăng ký".'</a>';
 				}
 				else{
-					echo '<a href="http://localhost:8088/public?url=users/logout">'."Dang xuat".'</a>';	
+					echo '<a href="http://hailocalhost/Web/CNWeb20201/Web20202/BTL/public?url=users/logout">'."Đăng xuất".'</a>';	
 				}
 			 ?>
-			
 		</li>
 	</ul>
-</div>
-<hr></hr>
+	<div class="burger">
+		<div class="line1"></div>
+		<div class="line2"></div>
+		<div class="line3"></div>
+	</div>
+
+</nav>
+<!-- <script src="/Web/CNWeb20201/rent_house/public/header.js" type="text/javascript"></script> -->
+<script src="header.js"></script>
+<!-- </div> -->
+<!-- <hr></hr> -->

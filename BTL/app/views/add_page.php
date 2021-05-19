@@ -3,18 +3,15 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
+	<link rel="stylesheet" href="header.css">
+
 	<style>
-		ul#ulheader li{
-			display: inline;
-			padding: 20px;
-		}
-		#divheader{
-			text-align: right;
-			margin-right: 2px;
-		}
 		.form{
 			border: solid;
 			padding: 10px;
+		}
+		.dang_tin a{
+			color: tomato;
 		}
 	</style>
 </head>
@@ -25,9 +22,9 @@
 		<?php if(isset($suc)) echo "<p>".$suc."</p>";?>
 	</div>
 	<div>
-		<form action="http://localhost:8088/public?url=houses/addHouse" method="POST" class="form" enctype="multipart/form-data">
+		<form action="http://hailocalhost/Web/CNWeb20201/Web20202/BTL/public?url=houses/addHouse" method="POST" class="form" enctype="multipart/form-data">
 			<div class="">
-				<p>quan<p/>
+				<p>quan</p>
 				<select name="site" id="site">
 					<option value="hai ba trung">hai ba trung</option>
 					<option value="hoan kiem">hoan kiem</option>

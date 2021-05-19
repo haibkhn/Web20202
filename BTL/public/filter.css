@@ -1,0 +1,13 @@
+.outside_border{
+    margin: auto;
+    width: 80%;
+    border: 3px solid green;
+    height: 200px;
+    padding: 20px;
+}
+.search_bar{
+    border: 3px solid salmon;
+    width: 90%;
+    height: 50%;
+    margin: auto;
+}

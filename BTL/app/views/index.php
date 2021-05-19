@@ -3,16 +3,16 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- <link rel="stylesheet" href="/Web/CNWeb20201/rent_house/public/header.css" media="all" type="text/css"/> -->
+	<link rel="stylesheet" href="header.css">
+	<link rel="stylesheet" href="filter.css">
 	<link rel="import" href="home.php">
+	<!-- <link rel="preconnect" href="https://fonts.gstatic.com"> -->
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
 	<title>Document</title>
 	<style>
-		ul#ulheader li{
-			display: inline;
-			padding: 20px;
-		}
-		#divheader{
-			text-align: right;
-			margin-right: 2px;
+		.logo a{
+			color: tomato;
 		}
 		.margin1{
 			margin: 5px;
@@ -22,7 +22,7 @@
 		}
 		#filterform{
 			border: solid;
-			width: 300px;
+			width: 100%;
 			height: 500px;
 			display: inline-block;
 		}
@@ -58,7 +58,7 @@
 <body>
 	<?php include "header.php" ?>
 	<?php include "filter.php" ?>
-	<div id="listhouse">
+	<!-- <div id="listhouse">
 		<div >
 			<div class="display1">
 				<img src="<?php echo "#"?>" class="image1">
@@ -73,10 +73,8 @@
 					 ?>
 				</div>
 			</div>
-
 		</div>
-
-	</div>
+	</div> -->
 </div>
 </body>
 </html>	

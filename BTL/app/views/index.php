@@ -6,6 +6,10 @@
 	<!-- <link rel="stylesheet" href="/Web/CNWeb20201/rent_house/public/header.css" media="all" type="text/css"/> -->
 	<link rel="stylesheet" href="header.css">
 	<link rel="stylesheet" href="filter.css">
+	<script src="https://kit.fontawesome.com/c9b833d924.js" crossorigin="anonymous"></script>
+
+	<!-- <link rel="stylesheet" href="public/css/all.css"> -->
+
 	<link rel="import" href="home.php">
 	<!-- <link rel="preconnect" href="https://fonts.gstatic.com"> -->
 	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
@@ -57,7 +61,7 @@
 </head>
 <body>
 	<?php include "header.php" ?>
-	<?php include "filter.php" ?>
+	<?php include "filter.html" ?>
 	<!-- <div id="listhouse">
 		<div >
 			<div class="display1">

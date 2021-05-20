@@ -160,7 +160,7 @@ class usersCtrl extends controller
         //session_start();
         $_SESSION['username'] = $user['username'];
         //$_SESSION['email'] = $user->email;
-        header('location:http://localhost:8088/public');
+        header('location:http://hailocalhost/Web/CNWeb20201/Web20202/BTL/public');
     }
 
     public function logout() {
@@ -169,6 +169,6 @@ class usersCtrl extends controller
         // unset($_SESSION['username']);
         // unset($_SESSION['email']);
         session_unset();
-        header('location:http://localhost:8088/public');
+        header('location:http://hailocalhost/Web/CNWeb20201/Web20202/BTL/public');
     }
 }

@@ -1,0 +1,80 @@
+<div id="filterform">
+  <form
+    action="http://hailocalhost/Web/CNWeb20201/Web20202/BTL/public?url=homepage/filter"
+    method="post"
+  >
+    <div class="wrapper">
+      <div class="search-input">
+        <input type="text" placeholder="Please..." />
+
+		<div class="autocom-box"></div>
+
+		<button type="submit" name="filter" value="filter" class="icon"><i class="fas fa-search-location"></i></button>
+      </div>
+
+	  <div class="option-menu">
+      <div class="khu-vuc">
+        <select name="site" id="site">
+          <option value="">Tất cả khu vực</option>
+          <option value="hai ba trung">hai ba trung</option>
+          <option value="hoan kiem">hoan kiem</option>
+          <option value="dong da">dong da</option>
+          <option value="hoang mai">hoangmai</option>
+          <option value="thanh xuan">thanh xuan</option>
+          </select>
+      </div>
+      <div class="gia">
+        <button type='button' style="width: 100%; background:white;" onclick="showGia()">Giá nhà</button>
+        <div id="giaList" style="display: none;">
+          <label for="from">tu</label>
+          <input type="number" name="costfrom" id="from" class="text1" />
+          <label for="to">den</label>
+          <input type="number" name="costto" id="to" class="text1" />
+        </div>
+      </div>
+      <div class="dien-tich">
+        <button type='button' style="width: 100%; background:white;" onclick="showDTich()">Diện tích</button>
+        <div id="dtich"  style="display: none;">
+          <label for="from">tu</label>
+          <input type="number" name="sfrom" id="from" class="text1" />
+          <label for="to">den</label>
+          <input type="number" name="sto" id="to" class="text1" />
+        </div>
+      </div>
+      <div class="loai-nha">
+        <select name="type" id="type">
+          <option value="" disabled selected>Chọn loại nhà</option>
+          <option value="tat ca">tat ca</option>
+          <option value="chung cu mini">chung cu mini</option>
+          <option value="phong tro">phong tro</option>
+          <option value="nha nguyen can">nha nguyen can</option>
+          </select>
+      </div>
+
+	  </div>
+    </div>
+  </form>
+</div>
+<script src="filter.js"></script>
+<script src="filter_suggestion.js"></script>
+<script>
+  function showGia() {
+    var x = document.getElementById("giaList");
+    if (x.style.display === "none") {
+      x.style.display = "block";
+    } else {
+      x.style.display = "none";
+    }
+  }
+
+  function showDTich() {
+    var x = document.getElementById("dtich");
+    if (x.style.display === "none") {
+      x.style.display = "block";
+    } else {
+      x.style.display = "none";
+    }
+  }
+</script>
+
+

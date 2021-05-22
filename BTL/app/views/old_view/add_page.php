@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
-	<link rel="stylesheet" href="public/css/header.css">
+	<link rel="stylesheet" href="css/header.css">
 
 	<style>
 		.form{
@@ -18,10 +18,11 @@
 <body>
 	<?php include "header.php" ?>
 	<h1 style="display: inline-block; border: solid;">DANG TIN</h1>
-	<div style="display: inline-block;background: lightgreen" id="AHreport">
-
+	<div style="display: inline-block;background: green">
+		<?php if(isset($suc)) echo "<p>".$suc."</p>";?>
+	</div>
 	<div>
-		<form action="http://localhost:8088/public?url=houses/addHouse" method="POST" class="form" enctype="multipart/form-data">
+		<form action="http://hailocalhost/Web/CNWeb20201/Web20202/BTL/public?url=houses/addHouse" method="POST" class="form" enctype="multipart/form-data">
 			<div class="">
 				<p>quan</p>
 				<select name="site" id="site">
@@ -72,9 +73,4 @@
 	</div>
 	
 </body>
-<script type="text/javascript">
-	var getCookieValue = (name) => (
-		document.cookie.match('(^|;)\\s*' + name + '\\s*=\\s*([^;]+)')?.pop() || '')
-	document.getElementById("AHreport").innerHTML = getCookieValue('AHreport');
-</script>
 </html>

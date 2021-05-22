@@ -4,13 +4,17 @@
  */
 	require_once __DIR__.'/../core/controller.php';
 	require_once __DIR__.'/../controllers/housesCtrl.php';
+	require_once __DIR__.'/../controllers/savesCtrl.php';
 
 	class homepageCtrl extends controller
 	{
 		private $housesCtrl;
+		private $savesCtrl;
 
 		public function __construct(){
 			$this->housesCtrl = new housesCtrl();
+			$this->savesCtrl = new savesCtrl();
+
 			//header('Content-Type: application/json');
 			// echo $data;
 			
@@ -39,7 +43,7 @@
 			// var_dump($dataPost);
 			$data = $housesCtrl->filterHouseCtrl($dataPost);
 			// var_dump($data);
-			$this->view('index',$data); 
+			$this->view('filterPage',$data); 
 		}
 
 		public function addPage(){
@@ -49,5 +53,18 @@
 				$this->getAll();
 			}
 		}
+
+		public function savePage(){
+			$listId = $this->savesCtrl->getSaved();
+			// print_r($listId);
+			$data = $this->housesCtrl->getFromSave($listId);
+			// print_r($data);
+			$this->view('save',$data);
+		}
 		
+		public function added(){
+			$data = $this->housesCtrl->getAdded();
+			$this->view('added', $data);
+		}
+
 	}

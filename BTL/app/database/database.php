@@ -3,7 +3,8 @@
 
 		private $host = "localhost";
 		private $user = "root";
-		private $pw   = "" ;
+		private $pw   = "Hhai_0405" ;
+		// private $pw   = "" ;
 		private $dtbn = "rent_house";
 
 		protected $connect;

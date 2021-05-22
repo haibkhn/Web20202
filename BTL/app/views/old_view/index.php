@@ -4,9 +4,9 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<!-- <link rel="stylesheet" href="/Web/CNWeb20201/rent_house/public/header.css" media="all" type="text/css"/> -->
-	<link rel="stylesheet" href="public/css/header.css">
-	<link rel="stylesheet" href="public/css/filter.css">
-	<link rel="stylesheet" type="text/css" href="public/css/news.css">
+	<link rel="stylesheet" href="css/header.css">
+	<link rel="stylesheet" href="css/filter.css">
+	<link rel="stylesheet" type="text/css" href="css/news.css">
 
 	<script src="https://kit.fontawesome.com/c9b833d924.js" crossorigin="anonymous"></script>
 
@@ -41,25 +41,6 @@
 			display: inline-block;
 			width: 1500px;
 		}
-		.item_house{
-			border: dotted;
-		}
-		img.main_img{
-			width: auto;
-			height: 100px;
-			/*display: inline-block;*/
-		}
-		img.item_img{
-			width: auto;
-			height: 70px;
-			/*display: inline-block;*/
-		}
-		.item_info{
-			display: inline-block;
-		}
-		div.img{
-			display: inline-block;
-		}
 		/*.image1{
 			width: 
 		}*/
@@ -82,27 +63,26 @@
 </head>
 <body>
 	<?php include "header.php" ?>
-	<div>
-		<?php include "filter.html" ?>
-		<div id="saveReport" style="background-color: lightgreen;"></div>
-		<div id="listhouse">
-			<div >
-				<div class="display1">
-					<div id="list"></div>
-					<div>
-						
-					</div>
+	<?php include "filter.html" ?>
+	<!-- <div id="listhouse">
+		<div >
+			<div class="display1">
+				<img src="<?php echo "#"?>" class="image1">
+				<div id="list"></div>
+				<div>
+					<?php
+						foreach (json_decode($data) as $key => $value) {
+							print_r($value);
+							echo "<br/>";
+						}
+						//print_r(json_decode($data));
+					 ?>
 				</div>
 			</div>
 		</div>
-	</div>
+	</div> -->
 	<?php include "news.html" ?>
 
 </div>
 </body>
-<script type="text/javascript">
-	var getCookieValue = (name) => (
-		document.cookie.match('(^|;)\\s*' + name + '\\s*=\\s*([^;]+)')?.pop() || '')
-	document.getElementById("saveReport").innerHTML = getCookieValue('saveReport');
-</script>
 </html>	

@@ -51,4 +51,14 @@ require_once __DIR__.'/../database/database.php';
 			if(count($result)>0) return true;
 			return false;
 		}
+
+		public function getIduser($username){
+				$sql = 'SELECT id FROM rent_house.users where name = :username';
+				$stmt = $this->connect->prepare($sql);
+				$stmt->bindValue(':username',$username);
+				
+				$stmt->execute();
+				$id = $stmt->fetch();
+				return $id['id'];
+			}
 	}

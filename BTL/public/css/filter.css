@@ -122,6 +122,15 @@
     padding: 10px;
 }
 
+.khu-vuc select{
+    border-radius: 5px;
+}
+.khu-vuc select option, .loai-nha select option{
+    color: black;
+}
+.khu-vuc select option:hover, .loai-nha select option:hover{
+    background-color: rgb(132, 179, 233);
+}
 .khu-vuc, .loai-nha{
     /* float:left; */
     width: 20%;
@@ -134,6 +143,7 @@
 .khu-vuc #site, .loai-nha #type{
     background:inherit;
     color: white;
+    border-radius: 5px;
 }
 
 
@@ -165,12 +175,20 @@
 }
 
 .gia #giaList, .dien-tich #dtich{
-    border: 3px solid rgb(89, 0, 255);
+    /* border: 3px solid rgb(89, 0, 255); */
     width: inherit;
-    height: 30px;
+    height: 40px;
+    margin-top: 5px;
+    padding: 5px;
     background: white;
     z-index: 50;
     position: absolute;
+    border-radius: 5px;
+}
+
+.text1 {
+    text-align: center;
+    margin-top: 1px;
 }
 
 .gia input, .dien-tich input {

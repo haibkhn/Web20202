@@ -6,10 +6,10 @@
 	<ul class="nav-links">
 		<?php 
 			if(isset($_SESSION['username'])){
-				echo "<li><a href=\"http://localhost:8088/public?url=homepage/added\">Phòng của bạn</a></li>";
+				echo "<li class='phong-cua-ban'><a href=\"http://localhost:8088/public?url=homepage/added\">Phòng của bạn</a></li>";
 			}
 			if(isset($_SESSION['username'])){
-				echo "<li><a href=\"http://localhost:8088/public?url=homepage/savePage\">Đã lưu</a></li>";
+				echo "<li class='da-luu'><a href=\"http://localhost:8088/public?url=homepage/savePage\">Đã lưu</a></li>";
 			}
 		 ?>
 		<!-- <li><a href="http://localhost:8088/public">Trang chủ</a></li> -->

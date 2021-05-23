@@ -2,15 +2,22 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 	<title>Document</title>
+	<link rel="stylesheet" href="public/css/header.css">
+
 	<style>
-		ul#ulheader li{
+		/* ul#ulheader li{
 			display: inline;
 			padding: 20px;
 		}
 		#divheader{
 			text-align: right;
 			margin-right: 2px;
+		} */
+		.da-luu a{
+			color: tomato;
 		}
 		.form{
 			border: solid;

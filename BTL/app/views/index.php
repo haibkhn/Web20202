@@ -15,6 +15,8 @@
 	<link rel="import" href="home.php">
 	<!-- <link rel="preconnect" href="https://fonts.gstatic.com"> -->
 	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+	
 	<title>Document</title>
 	<style>
 		.logo a{
@@ -27,7 +29,7 @@
 			width: 50px;
 		}
 		#filterform{
-			border: solid;
+			/* border: solid; */
 			width: 100%;
 			height: 500px;
 			display: inline-block;
@@ -37,9 +39,9 @@
 		}
 		#listhouse{
  
-			border: solid;
+			/* border: solid; */
 			display: inline-block;
-			width: 1500px;
+			width: 100%;
 		}
 		.item_house{
 			border: dotted;
@@ -83,7 +85,7 @@
 <body>
 	<?php include "header.php" ?>
 	<div>
-		<?php include "filter.html" ?>
+		<?php include "filter.php" ?>
 		<div id="saveReport" style="background-color: lightgreen;"></div>
 		<div id="listhouse">
 			<div >
@@ -96,7 +98,7 @@
 			</div>
 		</div>
 	</div>
-	<?php include "news.html" ?>
+	<?php include "news.php" ?>
 
 </div>
 </body>

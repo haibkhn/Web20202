@@ -20,7 +20,8 @@
 }
 .title {
     text-align: center;
-    margin: 50px 0;
+	font-family: 'Dancing Script', cursive;
+    /* margin: 50px 0; */
 }
 .column-card {
     display: flex;

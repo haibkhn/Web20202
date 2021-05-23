@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
+	<title>Nhà của mình</title>
 	<link rel="stylesheet" href="public/css/header.css">
 	<link rel="stylesheet" href="public/css/add_page.css">
 	<link rel="stylesheet" href="public/css/filterPage.css">
@@ -234,7 +234,7 @@
 					</div>
 				</form>
 			</div>
-			<span class="modal-close" style="color:white; font-size:35px;"><i class="fas fa-times" style="text-shadow: 0 0 10px #fec107;"></i></span>
+			<span class="modal-close" style="color:white; font-size:35px"><i class="fas fa-times" style="text-shadow: 0 0 10px #fec107;"></i></span>
 		</div>
 	</div>
 	
@@ -250,7 +250,11 @@
 		modalClose.addEventListener('click', function(){
 			modalBg.classList.remove('bg-active');
 		});
-
+		window.onclick = function(event) {
+			if (event.target == modalBg) {
+				modalBg.classList.remove('bg-active');
+			}
+		}
 	</script>
 </body>
 </html>

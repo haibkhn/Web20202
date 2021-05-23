@@ -7,7 +7,7 @@
     
       <div class="wrapper">
         <div class="search-input">
-          <input type="text" placeholder="Please..." />
+          <input type="text" autocomplete="off" placeholder="Nhập khu vực bạn muốn tìm" />
 
           <div class="autocom-box"></div>
 
@@ -39,7 +39,7 @@
           </div>
 
           <div class="gia">
-            <button type="button" onclick="showGia()">Giá nhà</button>
+            <button type="button" onclick="showGia()">Giá nhà <i style="float:right; font-size:11px;" class="fas fa-chevron-down"></i></button>
             <div id="giaList" style="display: none; text-align: center">
               <label for="from"></label>
               <input type="number" name="costfrom" id="from" class="text1" placeholder="Từ"/>
@@ -52,7 +52,7 @@
           </div>
 
           <div class="dien-tich">
-            <button type="button" onclick="showDTich()">Diện tích</button>
+            <button type="button" onclick="showDTich()">Diện tích <i style="float:right; font-size:11px;" class="fas fa-chevron-down"></i></button>
             <div id="dtich" style="display: none; text-align: center">
               <label for="from"></label>
               <input type="number" name="sfrom" id="from" class="text1" placeholder="Từ"/>
@@ -91,4 +91,5 @@
       x.style.display = "none";
     }
   }
+
 </script>

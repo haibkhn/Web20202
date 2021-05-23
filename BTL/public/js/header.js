@@ -4,7 +4,14 @@ const navSlide = () => {
     const navLinks = document.querySelectorAll('.nav-links li');
 
     burger.addEventListener('click', () => {
+        // nav.style.display = "flex";
         nav.classList.toggle('nav-active');
+        if (document.body.style.overflow === "hidden") {
+            document.body.style.overflow = "auto"
+        }
+        else {
+            document.body.style.overflow = "hidden";
+        }
 
         navLinks.forEach(link => {
             link.classList.toggle("fade");
@@ -14,12 +21,18 @@ const navSlide = () => {
         //         link.style.animation = '';
         //     } 
         //     else {
-        //         link.style.animation = 'navLinkFade 0.5s ease forwards ${index / 5 + 0.5}s';
+        //         link.style.animation = 'navLinkFade 0.5s ease forwards 0.2s';
         //     }
         //     console.log(index);
         // });
         burger.classList.toggle('burger_toggle');
     });
+
 }
 
 navSlide();
+// window.onclick = function(event) {
+//     if (event.target == nav) {
+//         navSlide();
+//     }
+// }

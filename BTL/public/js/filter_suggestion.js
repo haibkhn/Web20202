@@ -1,5 +1,7 @@
 let suggestions = [
-    "Hai Ba Trung",
-    "Cau Giay",
-    "Hoang Mai"
+    "Hai Bà Trưng",
+    "Hoàn Kiếm",
+    "Hoàng Mai",
+    "Đống Đa",
+    "Thanh Xuân",
 ];

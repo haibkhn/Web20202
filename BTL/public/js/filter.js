@@ -27,12 +27,12 @@ inputBox.onkeyup = (e) => {
         // an autocomplete
         searchWrapper.classList.remove("active");
     }
-    
 }
 
 function select(element) {
     let selectUserData = element.textContent;
     inputBox.value = selectUserData; //cho vao o tim kiem
+    console.log(selectUserData);
     searchWrapper.classList.remove("active");
 }
 

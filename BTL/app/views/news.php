@@ -8,7 +8,7 @@
             <div class="panel">
                 <span class="date">1st</span>
                 <p>
-                    I enjoy turning complex problems into simple, beautiful and intuitive designs.
+                    Học bách khoa rất là dzui.
                 </p>
                 <span class="breaker"></span>
                 <h3>
@@ -22,7 +22,7 @@
             <div class="panel">
                 <span class="date">2nd</span>
                 <p>
-                    I enjoy turning complex problems into simple, beautiful and intuitive designs.
+                    Học bách khoa rất là dzui.
                 </p>
                 <span class="breaker"></span>
                 <h3>
@@ -36,7 +36,7 @@
             <div class="panel">
                 <span class="date">3rd</span>
                 <p>
-                    I enjoy turning complex problems into simple, beautiful and intuitive designs.
+                    Học bách khoa rất là dzui.
                 </p>
                 <span class="breaker"></span>
                 <h3>
@@ -50,7 +50,7 @@
             <div class="panel">
                 <span class="date">4th</span>
                 <p>
-                    I enjoy turning complex problems into simple, beautiful and intuitive designs.
+                    Học bách khoa rất là dzui.
                 </p>
                 <span class="breaker"></span>
                 <h3>
@@ -64,7 +64,7 @@
             <div class="panel">
                 <span class="date">5th</span>
                 <p>
-                    I enjoy turning complex problems into simple, beautiful and intuitive designs.
+                    Học bách khoa rất là dzui.
                 </p>
                 <span class="breaker"></span>
                 <h3>
@@ -78,7 +78,7 @@
             <div class="panel">
                 <span class="date">6th</span>
                 <p>
-                    I enjoy turning complex problems into simple, beautiful and intuitive designs.
+                    Học bách khoa rất là dzui.
                 </p>
                 <span class="breaker"></span>
                 <h3>

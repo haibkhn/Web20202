@@ -36,6 +36,8 @@
 			position: fixed;
 			width: 100%;
 			height: 100vh;
+			/* max-height: calc(100vh - 210px); */
+    		/* overflow-y: auto; */
 			top: 0;
 			left: 0;
 			/* background-color: rgba(0,0,0,0.5); */
@@ -50,14 +52,24 @@
 			visibility: visible;
 			opacity: 1;
 		}
+		.wrapper{
+			background: none;
+		}
+		.wrapper form{
+			/* border: 3px solid salmon; */
+			background-color: white;
+			padding: 10px;
+			margin-bottom: 20px;
+		}
 		.modal{
-			position: relative;
+			position: absolute;
 			/* background-color: white; */
 			width: 60%;
 			height: 80%;
 			display: flex;
 			background: url("public/img/lado.jpg");
-
+			max-height: 100%;
+			overflow-y: auto;
 		}
 		.modal_btn{
 			position: absolute;

@@ -19,7 +19,7 @@
 	<?php include "header.php" ?>
 	<section>
 		<div class="img-sec">
-				<img src="https://davidasutton.files.wordpress.com/2019/05/psx_20190410_221235.jpg?w=1700&h=1084">
+				<img src="public/img/register2.jpg">
 		</div>
 		<div class="content">
 			<div class="form-content">

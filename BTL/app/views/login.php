@@ -21,7 +21,7 @@
 	<?php include "header.php" ?>
 	<section>
 		<div class="img-sec">
-			<img src="https://media.cntraveler.com/photos/58a76bb1e85725558885abb3/16:9/w_2560%2Cc_limit/cherry-blossom-season.jpg">
+			<img src="public/img/login2.jpg">
 		</div>
 		<div class="content">
 			<div class="form-content">

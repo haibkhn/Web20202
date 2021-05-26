@@ -1,4 +1,4 @@
-CREATE DATABASE  IF NOT EXISTS `rent_house` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
+CREATE DATABASE  IF NOT EXISTS `rent_house` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
 USE `rent_house`;
 -- MySQL dump 10.13  Distrib 8.0.22, for Linux (x86_64)
 --
@@ -37,7 +37,7 @@ CREATE TABLE `houses` (
   PRIMARY KEY (`id`),
   KEY `iduser` (`iduser`),
   CONSTRAINT `houses_ibfk_1` FOREIGN KEY (`iduser`) REFERENCES `users` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=24 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=30 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -46,8 +46,33 @@ CREATE TABLE `houses` (
 
 LOCK TABLES `houses` WRITE;
 /*!40000 ALTER TABLE `houses` DISABLE KEYS */;
-INSERT INTO `houses` VALUES (3,'sdfasdf',234234,34,'chung cu mini','',2,'oF4sNKvICApoggers.jpg;6N6XkVSTOldf.jpeg;dfUDWn7plbfd.png;','hai ba trung'),(4,'sdfdf',234233,34,'chung cu mini','',2,'3QpEsZsp3iimages.jpeg;','hai ba trung'),(5,'fsdgdf',234234,34,'chung cu mini','',2,'Wg0GN1EGAiyt.jpeg;','hai ba trung'),(6,'fsdfsf',2342344,43,'chung cu mini','',2,'IlFeFH4nqOimages.jpeg;','hai ba trung'),(7,'gerg',564566,454,'chung cu mini','',2,'9XpRSWw4fLhg.png;','hai ba trung'),(8,'sadfet',546456,34,'chung cu mini','',2,'syhd6dYotzhg.png;','hai ba trung'),(9,'trete',345455,45,'phong tro','',2,'H6tycvyaWJyt.jpeg;','hai ba trung'),(10,'dsgdfg',4534534,454,'chung cu mini','',2,'95TEQxPbBNimages.jpeg;','hai ba trung'),(11,'asdfads',343434,43,'nha nguyen can','',5,'KgybekEu3Ehg.png;l5VuIKT5nsimages.jpeg;OxihgdS56cmonkas.png;4faOdZL3TRpoggers.jpg;','dong da'),(12,'ffsdf',232323,323,'chung cu mini','',2,'nHnNuPliONcover9.jpg;','hai ba trung'),(13,'fasdfsd',234234234,344,'chung cu mini','',2,'WNbQSvnkdjcover9.jpg;','hai ba trung'),(14,'dfasdfasd',234323,34,'chung cu mini','',2,'wDN3g3ZYTIcover9.jpg;','hai ba trung'),(15,'4323423',3434234,43,'chung cu mini','',2,'eHfVwEjVKncover9.jpg;','hai ba trung'),(16,'dfgdf',3423443,34,'chung cu mini','',2,'c4SvyXzTyhcover9.jpg;','hai ba trung'),(17,'sdfsd',3423423,34,'chung cu mini','',2,'S1KxT4er6Ncover9.jpg;','hai ba trung'),(18,'ssdfsdf',234323,34,'chung cu mini','',2,'HBoGJtlU0Tcover9.jpg;','hai ba trung'),(19,'adfsad',1231232,23,'chung cu mini','',2,'ZGl3cngdAscover9.jpg;','hai ba trung'),(20,'sadfasdf',423423,34,'chung cu mini','',2,'XEgEoXUkSUcover9.jpg;','hai ba trung'),(21,'werwer',3423423,34,'chung cu mini','',2,'i1OCVJr4Hscover9.jpg;','hai ba trung'),(22,'234ewfs',3423423,343,'chung cu mini','',2,'CDjZwhrKNRcover9.jpg;','hai ba trung'),(23,'wrewer',324334,343,'chung cu mini','',2,'hz6I1kNMzicover9.jpg;','hai ba trung');
+INSERT INTO `houses` VALUES (9,'trete',345455,45,'phong tro','',2,'H6tycvyaWJyt.jpeg;','hai ba trung'),(10,'dsgdfg',4534534,454,'chung cu mini','',2,'95TEQxPbBNimages.jpeg;','hai ba trung'),(11,'asdfads',343434,43,'nha nguyen can','',5,'KgybekEu3Ehg.png;l5VuIKT5nsimages.jpeg;OxihgdS56cmonkas.png;4faOdZL3TRpoggers.jpg;','dong da'),(12,'ffsdf',232323,323,'chung cu mini','',2,'nHnNuPliONcover9.jpg;','hai ba trung'),(13,'fasdfsd',234234234,344,'chung cu mini','',2,'WNbQSvnkdjcover9.jpg;','hai ba trung'),(15,'4323423',3434234,43,'chung cu mini','',2,'eHfVwEjVKncover9.jpg;','hai ba trung'),(19,'adfsad',1231232,23,'chung cu mini','',2,'ZGl3cngdAscover9.jpg;','hai ba trung'),(21,'werwer',3423423,34,'chung cu mini','',2,'i1OCVJr4Hscover9.jpg;','hai ba trung'),(22,'234ewfs',3423423,343,'chung cu mini','',2,'CDjZwhrKNRcover9.jpg;','hai ba trung');
 /*!40000 ALTER TABLE `houses` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `saves`
+--
+
+DROP TABLE IF EXISTS `saves`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `saves` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `iduser` int DEFAULT NULL,
+  `idhouse` int DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `saves`
+--
+
+LOCK TABLES `saves` WRITE;
+/*!40000 ALTER TABLE `saves` DISABLE KEYS */;
+INSERT INTO `saves` VALUES (4,2,3),(5,2,4),(11,2,7),(12,2,12),(13,2,13),(17,1,6),(18,1,5),(19,1,8),(20,1,11),(21,1,12);
+/*!40000 ALTER TABLE `saves` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -64,7 +89,7 @@ CREATE TABLE `users` (
   `pass` varchar(1000) DEFAULT NULL,
   `phone` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -86,4 +111,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-05-17 20:32:12
+-- Dump completed on 2021-05-22 20:48:50

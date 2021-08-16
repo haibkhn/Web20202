@@ -26,7 +26,7 @@
 		<div class="content">
 			<div class="form-content">
 				<h2>Đăng nhập nào</h2>
-				<form action="http://localhost:8088/public?url=users/login" method="POST">
+				<form action="http://localhost:8088/public/?url=users/login" method="POST">
 					<div class="input-content">
 						<span>Tên đăng nhập</span>
 						<input type="text" name="username">
@@ -42,7 +42,7 @@
 					</div>
 					<div class="input-content">
 						<p>
-							Không có tài khoản ư, đăng ký thôi <a href="http://localhost:8088/public?url=users/register">Đăng ký</a>
+							Không có tài khoản ư, đăng ký thôi <a href="http://localhost:8088/public/?url=users/register">Đăng ký</a>
 						</p>
 					</div>
 				</form>

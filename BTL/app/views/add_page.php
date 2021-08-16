@@ -24,7 +24,7 @@
 	<div style="display: inline-block;background: lightgreen" id="AHreport"> </div>
 
 	<div class="wrapper">
-		<form action="http://localhost:8088/public?url=houses/addHouse" method="POST" class="form" enctype="multipart/form-data">
+		<form action="http://localhost:8088/public/?url=houses/addHouse" method="POST" class="form" enctype="multipart/form-data">
 			<div class="title">
 				Đăng tin nhà đất
 			</div>

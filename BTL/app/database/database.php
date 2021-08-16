@@ -1,16 +1,16 @@
 <?php 
 	class database {
 
-		private $host = "localhost";
+		private $host = "db";
 		private $user = "root";
-		private $pw   = "Hhai_0405" ;
+		private $pw   = "root" ;
 		// private $pw   = "" ;
 		private $dtbn = "rent_house";
 
 		protected $connect;
 
 		protected function connect(){
-			$dsn = 'mysql:host'.$this->host.';dbname='.$this->dtbn;
+			$dsn = 'mysql:host='.$this->host.';port=3306;dbname='.$this->dtbn;
 			try{
 				$pdo = new PDO($dsn, $this->user, $this->pw);
 				$pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);

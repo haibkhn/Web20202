@@ -24,7 +24,7 @@
 		<div class="content">
 			<div class="form-content">
 				<h2>Đăng ký nào</h2>
-				<form action="http://localhost:8088/public?url=users/register" method="POST">
+				<form action="http://localhost:8088/public/?url=users/register" method="POST">
 					<div class="input-content">
 						<span>Tên đăng nhập</span>
 						<input type="text" name="username">

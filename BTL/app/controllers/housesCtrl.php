@@ -150,4 +150,9 @@
   			// echo $suc[0];
   			$this->view('add_page');
 		}
+
+		public function detail($id){
+			$data = $this->model->getHouseById2($id);
+			$this->view('detail', $data);
+		}
 	}

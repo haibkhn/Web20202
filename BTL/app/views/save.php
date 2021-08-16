@@ -93,7 +93,7 @@
 									"Thông tin thêm: ".$value['scribble'] . "</p>";
 						echo "</div>";
 
-						echo "<a href=\"http://localhost:8088/public?url=saves/del/".$value['id']."\"><i class='fas fa-trash-alt'></i></a>";
+						echo "<a href=\"http://localhost:8088/public/?url=saves/del/".$value['id']."\"><i class='fas fa-trash-alt'></i></a>";
 						echo "</div>";
 					}
 				?>

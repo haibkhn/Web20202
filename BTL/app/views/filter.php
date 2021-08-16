@@ -1,7 +1,7 @@
 <div class="super-big">
   <div id="filterform">
     <form
-      action="http://localhost:8088/public?url=homepage/filter"
+      action="http://localhost:8088/public/?url=homepage/filter"
       method="post"
     >
     

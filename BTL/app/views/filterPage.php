@@ -93,19 +93,11 @@
 										"Loại nhà: ".$value_house."<br>".
 										"Thông tin thêm: ".$value['scribble'] . "</p>";
 							echo "</div>";
-
-							// foreach ($img as $key => $value2) {
-							// 	echo "<div class=\"img\">";
-							// 	echo "<img src=\"../public/img/".$value2."\" class=\" item_img\">";
-							// 	echo "</div>";
-							// }
 							if(isset($_SESSION['username']))
-							echo "<a href=\"http://localhost:8088/public?url=saves/save/".$value['id']."\"><i class='far fa-heart'></i></a>";
+							echo "<a href=\"http://localhost:8088/public/?url=saves/save/".$value['id']."\"><i class='far fa-heart'></i></a>";
 							echo "</div><br>";
-
-							// echo $value['img'];
-							// echo "<div>";
-							// echo ""
+							// echo $value['id'];
+							echo "<a href=\"http://localhost:8088/public/?url=houses/detail/".$value['id']."\">xem chi tiet</a>";	
 						}
 						// print_r(json_decode($data));
 					?>

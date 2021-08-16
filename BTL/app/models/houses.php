@@ -119,4 +119,13 @@
 				return 0;
 			}
 
+			public function getHouseById2($id){
+				$sql = 'select * from rent_house.houses where id = :id';
+				$stmt = $this->connect()->prepare($sql);
+				$stmt->bindValue(':id', $id);
+				$stmt->execute();
+				$res = $stmt->fetchAll(PDO::FETCH_ASSOC);
+				return $res;
+			}
+
 }	

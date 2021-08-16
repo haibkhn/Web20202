@@ -156,7 +156,7 @@
 									"Thông tin thêm: ".$value['scribble'] . "</p>";
 						echo "</div>";
 
-						echo "<a href=\"http://localhost:8088/public?url=houses/del/".$value['id']."\"><i class='fas fa-trash-alt'></i></a>";
+						echo "<a href=\"http://localhost:8088/public/?url=houses/del/".$value['id']."\"><i class='fas fa-trash-alt'></i></a>";
 						echo "<button class=\"modal_btn\" onclick=\"addBg(".$value['id'].")\"><i class='fas fa-edit'></i></button>";
 						echo "</div>";
 					}
@@ -168,7 +168,7 @@
 	<div class="modal-bg">
 		<div class="modal">
 			<div class="wrapper">
-				<form action="http://localhost:8088/public?url=houses/addHouse" method="POST" class="form" enctype="multipart/form-data">
+				<form action="http://localhost:8088/public/?url=houses/addHouse" method="POST" class="form" enctype="multipart/form-data">
 					<div class="title">
 						Sửa tin nhà đất
 					</div>
@@ -256,7 +256,7 @@
 		
 		function addBg(id){
 			modalBg.classList.add('bg-active');
-			document.getElementsByTagName("form")[0].setAttribute("action", "http://localhost:8088/public?url=houses/change/"+id);
+			document.getElementsByTagName("form")[0].setAttribute("action", "http://localhost:8088/public/?url=houses/change/"+id);
 		}
 
 		var modalClose = document.querySelector('.modal-close')

@@ -16,7 +16,7 @@
 			}       
 			// public function filter
 			public function filterHouseModel($data){
-				$sql = 'SELECT * FROM rent_house.houses where site LIKE :site and cost >= :costfrom and cost <= :costto and s >= :sfrom and s <=:sto and type LIKE :type';
+				$sql = 'SELECT * FROM rent_house.houses where site LIKE :site and cost >= :costfrom and cost <= :costto and area >= :sfrom and area <=:sto and type LIKE :type';
 				// print_r($data);
 				// echo "<br/>";
 				$stmt = $this->connect->prepare($sql);
@@ -37,7 +37,7 @@
 			}
 
 			public function insertHouse($data){
-				$sql = 'INSERT INTO rent_house.houses (site, addr, cost, s, type, scribble, iduser, img) values (:site, :addr, :cost, :s, :type, :scribble, :iduser, :img)';
+				$sql = 'INSERT INTO rent_house.houses (site, addr, cost, area, type, description, iduser, img) values (:site, :addr, :cost, :s, :type, :scribble, :iduser, :img)';
 				$stmt = $this->connect->prepare($sql);
 				$stmt->bindValue(':site',$data['site']);
 				$stmt->bindValue(':addr',$data['addr']);
@@ -54,7 +54,7 @@
 			}
 
 			public function change($data, $idhouse){
-				$sql = 'UPDATE rent_house.houses set site = :site, addr = :addr, cost = :cost, s = :s, type = :type, scribble = :scribble, img = :img
+				$sql = 'UPDATE rent_house.houses set district = :site, addr = :addr, cost = :cost, area = :s, type = :type, description = :scribble, img = :img
 						where id = :idhouse';
 				$stmt = $this->connect->prepare($sql);
 				$stmt->bindValue(':site',$data['site']);

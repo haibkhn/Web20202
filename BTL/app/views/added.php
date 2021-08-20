@@ -158,6 +158,7 @@
 
 						echo "<a href=\"http://localhost:8088/public/?url=houses/del/".$value['id']."\"><i class='fas fa-trash-alt'></i></a>";
 						echo "<button class=\"modal_btn\" onclick=\"addBg(".$value['id'].")\"><i class='fas fa-edit'></i></button>";
+                        echo "<a href=\"http://localhost:8088/public/?url=houses/detail/".$value['id']."\">xem chi tiet</a>";
 						echo "</div>";
 					}
 				?>

@@ -16,7 +16,7 @@
 			}       
 			// public function filter
 			public function filterHouseModel($data){
-				$sql = 'SELECT * FROM rent_house.houses where site LIKE :site and cost >= :costfrom and cost <= :costto and area >= :sfrom and area <=:sto and type LIKE :type';
+				$sql = 'SELECT * FROM rent_house.houses where district LIKE :site and cost >= :costfrom and cost <= :costto and area >= :sfrom and area <=:sto and type LIKE :type';
 				// print_r($data);
 				// echo "<br/>";
 				$stmt = $this->connect->prepare($sql);
@@ -37,7 +37,7 @@
 			}
 
 			public function insertHouse($data){
-				$sql = 'INSERT INTO rent_house.houses (site, addr, cost, area, type, description, iduser, img) values (:site, :addr, :cost, :s, :type, :scribble, :iduser, :img)';
+				$sql = 'INSERT INTO rent_house.houses (site, address, cost, area, type, description, iduser, img) values (:site, :addr, :cost, :s, :type, :scribble, :iduser, :img)';
 				$stmt = $this->connect->prepare($sql);
 				$stmt->bindValue(':site',$data['site']);
 				$stmt->bindValue(':addr',$data['addr']);

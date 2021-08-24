@@ -22,7 +22,7 @@
 
 		public function getAll(){
 			$data = $this->housesCtrl->getAll();
-			$this->view('index',$data);
+			$this->view('index');
 		}
 
 		public function filter(){

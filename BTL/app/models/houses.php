@@ -37,7 +37,7 @@
 			}
 
 			public function insertHouse($data){
-				$sql = 'INSERT INTO rent_house.houses (district, address, cost, area, type, description, iduser, img) values (:site, :addr, :cost, :s, :type, :scribble, :iduser, :img)';
+				$sql = 'INSERT INTO rent_house.houses (district, address, cost, area, type, description, iduser, img, street, bedroom, bathroom) values (:site, :addr, :cost, :s, :type, :scribble, :iduser, :img, :street, :bedroom, :bathroom)';
 				$stmt = $this->connect->prepare($sql);
 				$stmt->bindValue(':site',$data['site']);
 				$stmt->bindValue(':addr',$data['addr']);
@@ -48,13 +48,16 @@
 				$id = $this->getIduser($_SESSION['username']);
 				$stmt->bindValue(':iduser',$id);
 				$stmt->bindValue(':img',$data['img']);
+				$stmt->bindValue(':street', $data['street']);
+				$stmt->bindValue(':bedroom', $data['bedroom']);
+				$stmt->bindValue(':bathroom', $data['bathroom']);
 				// $stmt->execute();
 				if($stmt->execute() ) return true;
 				return false;
 			}
 
 			public function change($data, $idhouse){
-				$sql = 'UPDATE rent_house.houses set district = :site, address = :addr, cost = :cost, area = :s, type = :type, description = :scribble, img = :img
+				$sql = 'UPDATE rent_house.houses set district = :site, address = :addr, cost = :cost, area = :s, type = :type, description = :scribble, img = :img, street = :street, bedroom = :bedroom, bathroom = :bathroom
 						where id = :idhouse';
 				$stmt = $this->connect->prepare($sql);
 				$stmt->bindValue(':site',$data['site']);
@@ -65,6 +68,9 @@
 				$stmt->bindValue(':scribble',$data['scribble']);
 				$stmt->bindValue(':img',$data['img']);
 				$stmt->bindValue(':idhouse',$idhouse);
+				$stmt->bindValue(':street', $data['street']);
+				$stmt->bindValue(':bedroom', $data['bedroom']);
+				$stmt->bindValue(':bathroom', $data['bathroom']);
 				if($stmt->execute()) return true;
 				return false;
 			}	

@@ -186,6 +186,11 @@
 								</select>
 							</div>
 						</div>
+
+						<div class="inputfield">
+							<label>Đường</label>
+							<input type="text" name="street" required="required" class="input">
+						</div>
 					
 						<div class="inputfield">
 							<label>Địa chỉ cụ thể</label>
@@ -200,6 +205,16 @@
 						<div class="inputfield">
 							<label>Diện tích</label>
 							<input type="tel" name="s" pattern="[0-9]{1,4}" required="required" class="input">
+						</div>
+
+						<div class="inputfield">
+							<label>Số phòng tắm</label>
+							<input type="tel" name="bathroom" pattern="[0-9]{1,4}" required="required" class="input">
+						</div>
+
+						<div class="inputfield">
+							<label>Số phòng ngủ</label>
+							<input type="tel" name="bedroom" pattern="[0-9]{1,4}" required="required" class="input">
 						</div>
 
 						<div class="inputfield">

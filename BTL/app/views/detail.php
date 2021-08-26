@@ -10,9 +10,9 @@
     <?php include "header.php" ?>
         <?php
             $data = $data[0];
-            echo "<pre>";
-            print_r($data);
-            echo "</pre>";
+            // echo "<pre>";
+            // print_r($data);
+            // echo "</pre>";
             $img = $data['img'];
             $img = rtrim($img,';');
             $img  = explode(";",$img);

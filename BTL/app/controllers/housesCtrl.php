@@ -41,7 +41,10 @@
   				's' => '',
   				'scribble' => '',
   				'type' => '',
-  				'img' => ''
+  				'img' => '',
+				'street' => '',
+				'bathroom' => '',
+				'bedroom' => '',
   			];
   			foreach ($_POST as $key => $value) {
   				$dataPost[$key] = $value;
@@ -114,7 +117,7 @@
   			if($delBool == 1) $suc = "xoa thanh cong";
   			else $suc ="error";
   			setcookie("saveReport",$suc, time()+1);
-			header('location:http://localhost:8088/public?url=homepage/added');
+			header('location:http://localhost:8088/public/?url=homepage/added');
 		}
 
 		public function change($idhouse){
@@ -123,7 +126,7 @@
   			if($changeBool == 1) $suc = "them thanh cong";
   			else $suc = "ko them dc";
   			// echo $suc[0];
-  			header('location:http://localhost:8088/public?url=homepage/added');
+  			header('location:http://localhost:8088/public/?url=homepage/added');
 		}
 
 		public function getId(){

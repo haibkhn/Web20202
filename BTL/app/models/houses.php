@@ -37,7 +37,7 @@
 			}
 
 			public function insertHouse($data){
-				$sql = 'INSERT INTO rent_house.houses (district, address, cost, area, type, description, iduser, img, street, bedroom, bathroom) values (:site, :addr, :cost, :s, :type, :scribble, :iduser, :img, :street, :bedroom, :bathroom)';
+				$sql = 'INSERT INTO rent_house.houses (district, address, cost, area, type, description, iduser, img, street, bedroom, bathroom, phone, title) values (:site, :addr, :cost, :s, :type, :scribble, :iduser, :img, :street, :bedroom, :bathroom, :phone, :title)';
 				$stmt = $this->connect->prepare($sql);
 				$stmt->bindValue(':site',$data['site']);
 				$stmt->bindValue(':addr',$data['addr']);
@@ -51,13 +51,16 @@
 				$stmt->bindValue(':street', $data['street']);
 				$stmt->bindValue(':bedroom', $data['bedroom']);
 				$stmt->bindValue(':bathroom', $data['bathroom']);
+				$stmt->bindValue(':phone', $data['phone']);
+				$stmt->bindValue(':title', $data['title']);
+
 				// $stmt->execute();
 				if($stmt->execute() ) return true;
 				return false;
 			}
 
 			public function change($data, $idhouse){
-				$sql = 'UPDATE rent_house.houses set district = :site, address = :addr, cost = :cost, area = :s, type = :type, description = :scribble, img = :img, street = :street, bedroom = :bedroom, bathroom = :bathroom
+				$sql = 'UPDATE rent_house.houses set district = :site, address = :addr, cost = :cost, area = :s, type = :type, description = :scribble, img = :img, street = :street, bedroom = :bedroom, bathroom = :bathroom, phone = :phone, title = :title
 						where id = :idhouse';
 				$stmt = $this->connect->prepare($sql);
 				$stmt->bindValue(':site',$data['site']);
@@ -71,6 +74,9 @@
 				$stmt->bindValue(':street', $data['street']);
 				$stmt->bindValue(':bedroom', $data['bedroom']);
 				$stmt->bindValue(':bathroom', $data['bathroom']);
+				$stmt->bindValue(':phone', $data['phone']);
+				$stmt->bindValue(':title', $data['title']);
+
 				if($stmt->execute()) return true;
 				return false;
 			}	

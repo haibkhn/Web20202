@@ -29,6 +29,13 @@
 				Đăng tin nhà đất
 			</div>
 			<div class="form">
+
+				
+				<div class="inputfield">
+					<label>Tiêu đề</label>
+					<input type="text" name="title" required="required" class="input">
+				</div>
+
 				<div class="inputfield">
 					<label>Quận</label>
 					<div class="custom_select">
@@ -85,7 +92,7 @@
 
 				<div class="inputfield">
 					<label>Số điện thoại liên hệ</label>
-					<input type="text" class="input">
+					<input type="text" class="input" name="phone">
 				</div> 
 
 				<div class="inputfield">

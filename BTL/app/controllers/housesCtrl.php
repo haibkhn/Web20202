@@ -45,6 +45,8 @@
 				'street' => '',
 				'bathroom' => '',
 				'bedroom' => '',
+				'phone' => '',
+				'title' => '',
   			];
   			foreach ($_POST as $key => $value) {
   				$dataPost[$key] = $value;

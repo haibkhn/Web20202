@@ -37,6 +37,8 @@ CREATE TABLE `houses` (
   `street` varchar(45) DEFAULT NULL,
   `bedroom` int(11) DEFAULT NULL,
   `bathroom` int(11) DEFAULT NULL,
+  `phone` varchar(11) DEFAULT NULL,
+  'title' varchar(1000) DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `iduser` (`iduser`),
   CONSTRAINT `houses_ibfk_1` FOREIGN KEY (`iduser`) REFERENCES `users` (`id`)
